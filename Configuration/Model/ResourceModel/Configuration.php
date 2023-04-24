@@ -1,0 +1,13 @@
+<?php
+
+namespace Mobile\Configuration\Model\ResourceModel;
+
+use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
+
+class Configuration extends AbstractDb
+{
+    protected function _construct()
+    {
+        $this->_init('mobile_configuration', 'id');
+    }
+}

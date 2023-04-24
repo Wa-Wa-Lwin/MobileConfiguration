@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">  
+<menu>
+       <add id="Mobile_Configuration::first_level_demo"
+            title="Mobile Configuration Admin Menu" 
+            module="Mobile_Configuration"
+            sortOrder="20"
+            resource="Magento_Backend::content" />
+        <!-- <add id="Mobile_Configuration::second_level_demo" 
+            title="Sub Menu 1" 
+            module="Mobile_Configuration" 
+            sortOrder="1"
+            action="configuration/index/index"
+            parent="Mobile_Configuration::first_level_demo"
+            resource="Magento_Backend::content" /> -->
+        <add id="Mobile_Configuration::second_level_demo" 
+            title="Sub Menu 1" 
+            module="Mobile_Configuration" 
+            sortOrder="1"
+            action="mobile_configuration/index/index"
+            parent="Mobile_Configuration::first_level_demo"
+            resource="Magento_Backend::content" />
+  </menu>
+</config>

@@ -1,0 +1,28 @@
+<!-- <?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:app/etc/routes.xsd">
+  <route id="admin">
+  <route id="admin" frontName="mainmenu">
+  <module name="Mobile_Configuration"/>
+</router>
+</router>
+</config> -->
+
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:app/etc/routes.xsd">
+    <router id="admin">
+        <route id="configuration" frontName="admin">
+            <module name="Mobile_Configuration"/>
+        </route>
+    </router>
+</config>
+
+
+<!-- <?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:app/etc/routes.xsd">
+  <router id="admin">
+    <route id="mobile_configuration" frontName="mobile_configuration">
+      <module name="Mobile_Configuration"/>
+    </route>
+  </router>
+</config> -->

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Magento\Config\Block\System\Config\Form" name="mobile_configuration_system_config" template="system/config/edit.phtml">
+                <arguments>
+                    <argument name="section" xsi:type="string">configuration</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

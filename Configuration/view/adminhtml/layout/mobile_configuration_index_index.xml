@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left">
+    <body>
+        <referenceContainer name="content">
+            <block class="Magento\Backend\Block\Widget\Tab\Container" name="mobile_configuration">
+                <block class="Magento\Backend\Block\Widget\Tab\Tab" name="mobile_configuration_tab">
+                    <arguments>
+                        <argument name="label" xsi:type="string" translate="true">Mobile Configuration</argument>
+                        <argument name="url" xsi:type="url" path="mobile_configuration/index/index"/>
+                    </arguments>
+                </block>
+                <block class="Magento\Framework\View\Element\Template" name="mobile_configuration_form" template="Mobile_Configuration::system/config.phtml">
+                    <block class="Magento\Config\Block\System\Config\Form" name="mobile_configuration_system_config" template="system/config/form.phtml">
+                        <arguments>
+                            <argument name="config_path" xsi:type="string">configuration</argument>
+                        </arguments>
+                    </block>
+                </block>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

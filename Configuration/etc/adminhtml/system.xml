@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="mobile" translate="label" sortOrder="100">
+            <label>Mobile Configuration</label>
+        </tab>
+        <section id="configuration" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Configuration</label>
+            <tab>mobile</tab>
+            <resource>Mobile_Configuration::configuration</resource>
+
+            <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Configuration</label>
+                <field id="enabled" translate="label comment" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable or disable the configuration</comment>
+                </field>
+
+
+                <field id="dropdown_field" translate="label" type="select"  sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Dropdown Field</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>This is a dropdown field</comment>
+                </field>
+
+                <field id="first_field" translate="label" type="text"  sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>First Field</label>
+                    
+                    <depends>
+                        <field id="dropdown_field">1</field>
+                    </depends>       
+                    <comment>This field is disabled by default, but will be enabled when dropdown_field is set to "Yes".</comment>         
+                </field>
+              
+                <field id="second_field" translate="label" type="text"  sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Second Field</label>
+                    <comment>This is a Second input box field</comment>                    
+                </field>
+
+                <field id="multiselect_field" translate="label" type="multiselect"  sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Multiple Choice Field</label>
+                    <!-- <source_model>Magento\Config\Model\Config\Source\Yesno</source_model> -->
+                    <comment>This is a multiple choice field</comment>
+                    <options>
+                        <option label="Option OK 1">Custom Value 1</option>
+                        <option label="Option 2" >Custom Value 2</option>
+                        <option label="Option 3" >Custom Value 3</option>
+                      
+                    </options>
+                </field>
+
+
+            
+
+                <!-- <field id="multiselect_field" translate="label" type="multiselect" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Multiple Choice Field</label>
+                    <source_model>Mobile\Configuration\Model\Config\Source\Multiselect</source_model>
+                    <comment>This is a multiple choice field</comment>
+                </field> -->
+
+            </group>
+
+        </section>
+    </system>
+</config>
